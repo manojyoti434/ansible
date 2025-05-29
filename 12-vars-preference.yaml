@@ -1,10 +1,10 @@
 - name: understand vars place prefernece
   hosts: local
-  connection: local
+  # connection: local
   vars:
     greeting: "hello from playbook"
-  # vars_files:
-  # - course.yaml
+  vars_files:
+   - course.yaml
   vars_prompt:
   - name: greeting
     prompt: "please enter the greeting"
@@ -16,5 +16,6 @@
     ansible.builtin.debug:
       msg: "{{ Greeting }}"
 
-# 1. from command line or arguments will be taken priority
+# 1. from command line or arguments passed in cmd line will be taken priority
 # 2. inventory
+#3. 
