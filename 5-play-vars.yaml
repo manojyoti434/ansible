@@ -14,4 +14,4 @@
   - name: print course information again
     ansible.builtin.debug:
     #vars refernce should be surrounded by ""
-      msg: "Hello {{ COURSE }}, Course Duration {{ DURATION }}, Learner is {{ Learner }} "
+      msg: "Hello {{ COURSE }}, Course Duration {{ DURATION }}, Learner is {{ Learner }}"
