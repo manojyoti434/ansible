@@ -1,17 +1,13 @@
-- name: play level variables
+- name: task level variables
   hosts: local
   connection: local
   vars:
-    COURSE: Ansible # equal to COURSE=Ansible in shell, shell we refer $VAR or ${VAR}
-    DURATION: 10HR
-    Learner: Manojyoti
+    course: devops
+    duration: 10HR
+    learner: Manojyoti
   tasks:
   - name: print course information
+    vars:
     ansible.builtin.debug:
-    #vars refernce should be surrounded by ""
-      msg: "Hello {{ COURSE }}, Course Duration {{ DURATION }}, Learner is {{Learner} }}"
-
-  - name: print course information again
-    ansible.builtin.debug:
-    #vars refernce should be surrounded by ""
-      msg: "Hello {{ COURSE }}, Course Duration {{ DURATION }}, Learner is {{ Learner }}"
+      msg: "hello {{course}}, course duration is {{duration}}, learner is {{learner}}"
+      
