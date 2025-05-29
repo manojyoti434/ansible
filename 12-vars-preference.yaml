@@ -11,11 +11,11 @@
   #    private: false
   
   tasks:
-  #- name: print the greeting
+  - name: print the greeting
      vars:
     #   GREETING: "Hello from TASK"
-     ansible.builtin.debug:
-       msg: "{{ GREETING }}"
+    ansible.builtin.debug:
+      msg: "{{ GREETING }}"
 
 
 # 1. from command line or arguments passed in cmd line will be taken priority
