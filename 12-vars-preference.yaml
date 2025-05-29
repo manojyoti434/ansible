@@ -1,0 +1,19 @@
+- name: understand vars place prefernece
+  hosts: local
+  connection: local
+  vars:
+    greeting: "hello from playbook"
+  vars_files:
+  - course.yaml
+  vars_prompt:
+  - name: greeting
+    prompt: "please enter the greeting"
+    private: false
+  tasks:
+  - name: print the greeting
+    vars:
+      Greetings "Hello from task"
+    ansible.builtin.debug:
+      msg: "{{ Greeting }}"
+
+      
