@@ -10,12 +10,12 @@
     prompt: "please enter the greeting"
     private: true
   tasks:
-  - name: print the greeting
-    vars:
-      Greeting: "Hello from task"
+  # - name: print the greeting
+  #   vars:
+  #     Greeting: "Hello from task"
     ansible.builtin.debug:
       msg: "{{ Greeting }}"
 
 # 1. from command line or arguments passed in cmd line will be taken priority
 # 2. inventory
-#3. 
+#3. task
