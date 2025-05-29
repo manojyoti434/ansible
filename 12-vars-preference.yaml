@@ -3,12 +3,12 @@
   connection: local
   vars:
     greeting: "hello from playbook"
-  vars_files:
-  - course.yaml
+  # vars_files:
+  # - course.yaml
   vars_prompt:
   - name: greeting
     prompt: "please enter the greeting"
-    private: false
+    private: true
   tasks:
   - name: print the greeting
     vars:
@@ -16,3 +16,5 @@
     ansible.builtin.debug:
       msg: "{{ Greeting }}"
 
+# 1. from command line or arguments will be taken priority
+# 2. inventory
