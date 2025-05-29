@@ -1,6 +1,6 @@
 - name: understand vars place prefernece
   hosts: local
-  onnection: local
+  connection: local
   vars:
     greeting: "hello from playbook"
   vars_files:
