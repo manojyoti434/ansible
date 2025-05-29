@@ -1,5 +1,5 @@
 - name: nginx install and run
-  hosts: frontend
+  hosts: local
   become: yes
   tasks:
     - name: install nginx server
