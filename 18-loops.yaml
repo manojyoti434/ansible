@@ -9,8 +9,6 @@
        state: installed
 
   loops:
-
-  - nginx
-  - mysql
-  - zip
-  
+    - nginx
+    - mysql
+    - zip
