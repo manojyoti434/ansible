@@ -4,12 +4,12 @@
   tasks:
   - name: install packages
     ansible.builtin.debug:
-      name: "{{ ITEM }}"
+      name: "{{ item }}"
       state: installed
     loop:
     - {name: 'nginx', state: "present" }
     - {name: 'mysql', state: 'present'}
     - { name: 'zip', state: 'absent'}
 
-    
+
 
